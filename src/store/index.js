@@ -18,7 +18,7 @@ export default new Vuex.Store({
       commit
     }) {
       try {
-        let response = await axios.get("http://localhost:4000");
+        let response = await axios.get("http://covid-tracker-vue.herokuapp.com/:27080");
         console.log(response.data);
         commit("SET_CASES", response.data.areas);
       } catch (err) {
